@@ -1,0 +1,190 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: landing
+title: Duelfer Solutions
+permalink: /
+---
+
+<style>
+    .jarallax-img {
+        background-image: url('/assets/img/fixed.png');
+    }
+    @media screen and (max-width: 1900px) {
+        .jarallax-img {
+            top: -75px !important;
+        }
+    }
+</style>
+
+{%- include navbar.html -%}
+
+<section class="pt-lg-5 mt-lg-5">
+    <div class="position-relative overflow-hidden">
+
+        <!-- Image -->
+        <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
+        <div class="row h-100 me-n4 me-n2">
+            <div class="col-lg-7 position-relative">
+            <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+            <div class="d-sm-none" style="height: 300px;"></div>
+            <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+                <div class="jarallax-img"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
+        <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+            <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
+
+            <!-- Card -->
+            <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
+                <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                <div class="card-body position-relative zindex-5">
+                <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Transformació digital</p>
+                <h1 class="display-5 text-light pb-3 mb-3">Assessorament i implementació de software</h1>
+                <p class="fs-lg text-light opacity-70 mb-5">Tinc més de 10 anys transformant empreses i entitats digitalment amb sistemes de ventes, servei, gestió i applicacions per conectar amb clients.</p>
+                <div class="d-flex flex-column flex-sm-row">
+                    <a href="/contacte" class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-4">Contacta'm</a>
+                    <a href="/qui-soc" class="btn btn-outline-light btn-lg">
+                    Qui soc
+                    <i class="bx bx-right-arrow-alt fs-4 lh-1 ms-2 me-n1"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
+
+            <!-- Contacts (List) -->
+            <ul class="list-unstyled mb-0 px-4 px-lg-0">
+                <li class="d-flex align-items-center pb-1 mb-2">
+                <li class="d-flex align-items-center pb-1 mb-2">
+                <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                <a href="mailto:jon@duelfersolutions.cat" class="nav-link fw-normal p-0">jon@duelfersolutions.cat</a>
+                </li>
+                <li class="d-flex align-items-center pb-1 mb-2">
+                <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                <a href="tel:+34685239905" class="nav-link fw-normal p-0">+34 685 239 905</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services (Turns into carousel on narrow screens) -->
+      <section class="container py-5 mt-md-3 my-lg-5">
+        <h2 class="h1 pt-xl-2 pb-4 mb-2 mb-lg-3">Que faig</h2>
+        <div class="swiper" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 24,
+          "autoHeight": true,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "991": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide">
+              <img src="/assets/img/01.jpg" class="rounded-3" alt="Image">
+              <div class="pt-4">
+                <h3 class="h4">Assessorament informàtic</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Per on està la seva empresa o entitat al món informàtic?
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Evaluació de sistemes existents
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Recomenacions per transformar la seva empresa o entitat digitalment
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide">
+              <img src="/assets/img/02.jpg" class="rounded-3" alt="Image">
+              <div class="pt-4">
+                <h3 class="h4">Pressupostació</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Quin és el millor sistema segons el teu pressupost?
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Quan valdria una implementació?
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Podries fer millores als sistemes existensts per evitar gastos?
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide">
+              <img src="/assets/img/03.jpg" class="rounded-3" alt="Image">
+              <div class="pt-4">
+                <h3 class="h4">Implementació i programació</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Implementació de sistemes de negoci (Salesforce, Hubspot, Oracle, SAP, Squarespace, Shopify, etc.)
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Programació de aplicacions i webs en AWS, Heroku, Google Cloud Console en una varitat de llengues de programació.
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Manteniment i integració amb sistemes existens o exteriors.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative d-lg-none mt-5"></div>
+        </div>
+      </section>
+
+
+      <!-- COVID banner -->
+      <section class="container">
+        <div class="card bg-white border-primary shadow-sm px-4 px-lg-0" data-bs-theme="light">
+          <div class="row align-items-center py-3">
+            <div class="col-xl-5 col-md-6 offset-lg-1 text-center text-md-start py-4 py-lg-5">
+              <h2 class="h1">Fem-ho!</h2>
+              <h3 class="h4 text-primary">No dubtes en contactar</h3>
+              <p class="mb-4 mb-lg-5">Primer, farem una introducció gratis per entendre el seu negoci o entitat per veure quin tipus de projecte tindria el més sentit. Después, farem pressupostos per assegurar que tot encaixa amb la seva visió.</p>
+              <a href="/contacte" class="btn btn-primary">Contacta'm</a>
+            </div>
+            <div class="col-xl-6 col-lg-5 col-md-6">
+              <lottie-player class="mx-auto" src="/assets/json/animation-financial-landing.json" background="transparent" speed="1" loop autoplay style="max-width: 416px;"></lottie-player>
+            </div>
+          </div>
+        </div>
+      </section>
