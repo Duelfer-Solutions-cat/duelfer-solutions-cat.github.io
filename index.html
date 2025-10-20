@@ -6,75 +6,103 @@ layout: landing
 title: Duelfer Solutions
 permalink: /
 ---
-
+<!-- Hero animation -->
 <style>
-    .jarallax-img {
-        background-image: url('/assets/img/fixed.png');
+  /* Spin animation */
+  @-webkit-keyframes hero-spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
-    @media screen and (max-width: 1900px) {
-        .jarallax-img {
-            top: -75px !important;
-        }
+  }
+  @keyframes hero-spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
+  }
+  .hero-animation-spin {
+    -webkit-animation: hero-spin 35s linear infinite;
+    animation: hero-spin 35s linear infinite;
+  }
+
+  /* Fade animation */
+  @-webkit-keyframes hero-fade {
+    0%, 100% { opacity: 0 }
+    50% { opacity: 1 }
+  }
+  @keyframes hero-fade {
+    0%, 100% { opacity: 0 }
+    50% { opacity: 1 }
+  }
+  .hero-animation-fade {
+    -webkit-animation: hero-fade 4s ease-in infinite;
+    animation: hero-fade 4s ease-in infinite;
+  }
+  .hero-animation-delay-1,
+  .hero-animation-delay-2,
+  .hero-animation-delay-3 {
+    opacity: 0;
+  }
+  .hero-animation-delay-1 { animation-delay: .75s; }
+  .hero-animation-delay-2 { animation-delay: 1.5s; }
+  .hero-animation-delay-3 { animation-delay: 2s; }
 </style>
 
-{%- include navbar.html -%}
+{%- include navbar-dark.html -%}
 
-<section class="pt-lg-5 mt-lg-5">
-    <div class="position-relative overflow-hidden">
-
-        <!-- Image -->
-        <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
-        <div class="row h-100 me-n4 me-n2">
-            <div class="col-lg-7 position-relative">
-            <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
-            <div class="d-sm-none" style="height: 300px;"></div>
-            <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
-                <div class="jarallax-img"></div>
-            </div>
-            </div>
+<!-- Hero + animations -->
+<section class="position-relative d-flex align-items-center min-vh-100 py-5 bg-dark overflow-hidden">
+  <span class="position-absolute top-0 start-0 d-dark-mode-block d-none w-100 h-100 bg-secondary opacity-75"></span>
+  <div class="container position-relative mt-5 mb-lg-5 mb-md-4 mb-3 pt-3 pb-xl-3" data-bs-theme="dark">
+    <div class="row gy-5">
+      <div class="col-xl-5 col-lg-6">
+        <div class="position-relative zindex-5 text-lg-start text-center">
+          <h1 class="display-2 mb-4 pb-lg-3 pb-md-2">Implementació de sistemes de <span class="text-primary">programari empresarial</span></h1>
+          <a href="/contacte" class="btn btn-lg btn-primary">Contacta'm</a>
         </div>
-        </div>
-
-        <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
-        <div class="row pt-lg-5 mx-n4 mx-lg-n3">
-            <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
-
-            <!-- Card -->
-            <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
-                <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
-                <div class="card-body position-relative zindex-5">
-                <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Transformació digital</p>
-                <h1 class="display-5 text-light pb-3 mb-3">Assessorament i implementació de software</h1>
-                <p class="fs-lg text-light opacity-70 mb-5">Tinc més de 10 anys transformant empreses i entitats digitalment amb sistemes de ventes, servei, gestió i applicacions per conectar amb clients.</p>
-                <div class="d-flex flex-column flex-sm-row">
-                    <a href="/contacte" class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-4">Contacta'm</a>
-                    <a href="/qui-soc" class="btn btn-outline-light btn-lg">
-                    Qui soc
-                    <i class="bx bx-right-arrow-alt fs-4 lh-1 ms-2 me-n1"></i>
-                    </a>
+      </div>
+      <div class="col-lg-6 offset-xl-1">
+        <div class="position-relative ms-xl-0 ms-lg-4">
+          <div class="position-absolute top-50 start-50 translate-middle ratio ratio-1x1" style="width: 125%; max-width: 49.75rem;">
+            <div class="p-md-0 p-5">
+              <img src="/assets/img/hero-bg.png" alt="Shape" class="hero-animation-spin p-md-0 p-5">
+            </div>
+          </div>
+          <div class="position-relative row row-cols-sm-2 row-cols-1 gx-xl-4 gx-lg-3 gx-md-4 gx-3">
+            <div class="col">
+              <div class="d-sm-grid d-flex gap-xl-4 gap-lg-3 gap-md-4 gap-sm-3 gap-2">
+                <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
+                  <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
+                    <span class="hero-animation-fade text-white">Sistemes ERP-CRM</span>
+                  </div>
                 </div>
+                <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
+                  <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
+                    <span class="hero-animation-fade hero-animation-delay-2 text-white">Un expert a les Terres de l'Ebre</span>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="col mt-sm-5 mt-2 pt-sm-5">
+              <div class="d-sm-grid d-flex gap-xl-4 gap-lg-3 gap-md-4 gap-sm-3 gap-2">
+                <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
+                  <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
+                    <span class="hero-animation-fade hero-animation-delay-1 text-white">Salesforce, Odoo, Hubspot, Shopify, SAP, Oracle, Zoho...</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center bg-secondary rounded-3" style="min-height: 176px; backdrop-filter: blur(6px);">
+                  <div class="p-xl-4 p-sm-3 p-2 fs-xl fw-semibold text-center">
+                    <span class="hero-animation-fade hero-animation-delay-3 text-white">Desenvolupament de programari a mida</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
-
-            <!-- Contacts (List) -->
-            <ul class="list-unstyled mb-0 px-4 px-lg-0">
-                <li class="d-flex align-items-center pb-1 mb-2">
-                <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-envelope fs-xl text-primary me-2"></i>
-                <a href="mailto:jon@duelfersolutions.cat" class="nav-link fw-normal p-0">jon@duelfersolutions.cat</a>
-                </li>
-                <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
-                <a href="tel:+34685239905" class="nav-link fw-normal p-0">+34 685 239 905</a>
-                </li>
-            </ul>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Services (Turns into carousel on narrow screens) -->
@@ -101,7 +129,7 @@ permalink: /
 
             <!-- Item -->
             <div class="swiper-slide">
-              <img src="/assets/img/01.jpg" class="rounded-3" alt="Image">
+              <img src="/assets/img/consulting.png" class="rounded-3" alt="Image">
               <div class="pt-4">
                 <h3 class="h4">Assessorament informàtic</h3>
                 <ul class="list-unstyled">
@@ -115,7 +143,7 @@ permalink: /
                   </li>
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
-                    Recomenacions per transformar la seva empresa o entitat digitalment
+                    Recomenacions per la transformació digital de la seva empresa o entitat
                   </li>
                 </ul>
               </div>
@@ -123,13 +151,13 @@ permalink: /
 
             <!-- Item -->
             <div class="swiper-slide">
-              <img src="/assets/img/02.jpg" class="rounded-3" alt="Image">
+              <img src="/assets/img/budgeting.png" class="rounded-3" alt="Image">
               <div class="pt-4">
                 <h3 class="h4">Pressupostació</h3>
                 <ul class="list-unstyled">
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
-                    Quin és el millor sistema segons el teu pressupost?
+                    Quin és el millor sistema de programari empresarial segons el seu pressupost?
                   </li>
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
@@ -137,7 +165,7 @@ permalink: /
                   </li>
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
-                    Podries fer millores als sistemes existensts per evitar gastos?
+                    Podries fer millores als sistemes existensts per evitar gastos innecessaris?
                   </li>
                 </ul>
               </div>
@@ -145,17 +173,17 @@ permalink: /
 
             <!-- Item -->
             <div class="swiper-slide">
-              <img src="/assets/img/03.jpg" class="rounded-3" alt="Image">
+              <img src="/assets/img/implementation.png" class="rounded-3" alt="Image">
               <div class="pt-4">
-                <h3 class="h4">Implementació i programació</h3>
+                <h3 class="h4">Implementació i desenvolupament</h3>
                 <ul class="list-unstyled">
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
-                    Implementació de sistemes de negoci (Salesforce, Hubspot, Oracle, SAP, Squarespace, Shopify, etc.)
+                    Implementació de sistemes de programari empresarial (Salesforce, Odoo, Hubspot, Oracle, SAP, Squarespace, Shopify, etc.)
                   </li>
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
-                    Programació de aplicacions i webs en AWS, Heroku, Google Cloud Console en una varitat de llengues de programació.
+                    Desenvolupament programri de aplicacions en AWS, Heroku, Google Cloud Console en una varitat de llengues de programació.
                   </li>
                   <li class="d-flex align-items-center fs-sm mb-2">
                     <i class="bx bx-check fs-xl text-primary me-2"></i>
@@ -179,7 +207,7 @@ permalink: /
             <div class="col-xl-5 col-md-6 offset-lg-1 text-center text-md-start py-4 py-lg-5">
               <h2 class="h1">Fem-ho!</h2>
               <h3 class="h4 text-primary">No dubtes en contactar</h3>
-              <p class="mb-4 mb-lg-5">Primer, farem una introducció gratis per entendre el seu negoci o entitat per veure quin tipus de projecte tindria el més sentit. Después, farem pressupostos per assegurar que tot encaixa amb la seva visió.</p>
+              <p class="mb-4 mb-lg-5">Primer, farem una introducció gratis per entendre el seu negoci o entitat. Después, farem un informe amb pressupostos potencials per entendre quines sistemes de programi empresarial tindria el més sentit comprar i implementar. Finalment, entrariem la fase de implementació i desenvolupament programari per transformar el seu negoci o entitat.</p>
               <a href="/contacte" class="btn btn-primary">Contacta'm</a>
             </div>
             <div class="col-xl-6 col-lg-5 col-md-6">

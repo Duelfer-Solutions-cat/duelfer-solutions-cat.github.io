@@ -18,11 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tranformació digital per negocis i entitats de les Terres de l'Ebre
-tagline: Assessorament i implementació de sistemes de software per negocis i entitats de les Terres de l'Ebre
+title: Implementació de sistemes de programari empresarial a les Terres de l'Ebre
+tagline: Implementació de sistemes de programari empresarial a les Terres de l'Ebre
 email: jon@duelfersolutions.cat
 description: >- # this means to ignore newlines until "baseurl:"
-  Transformació digital i programació per negocis i entitats de les Terres de l'Ebre per millorar sistemes de ventes, gestió d'incidències, i aplicacions per conectar amb clients.
+  Implementació de sistemes de programari per negocis i entitats de les Terres de l'Ebre amb una especialització en sistemes de ERP-CRM i desenvolupament de programari a mida.
 domain: duelfersolutions.cat
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://duelfersolutions.cat" # the base hostname & protocol for your site, e.g. http://example.com
